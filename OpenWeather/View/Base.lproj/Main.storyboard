@@ -229,18 +229,34 @@
         <!--App info-->
         <scene sceneID="B8G-hi-N0V">
             <objects>
-                <viewController id="a9x-0a-w82" sceneMemberID="viewController">
+                <viewController id="a9x-0a-w82" customClass="InfoViewController" customModule="OpenWeather" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ILL-Dj-qMR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AbA-Ju-HpX">
+                                <rect key="frame" x="47.5" y="286.5" width="319" height="323"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="323" id="HHA-3H-tO6"/>
+                                    <constraint firstAttribute="width" constant="319" id="fNk-C3-vo5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Neucha" family="Neucha" pointSize="33"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="AbA-Ju-HpX" firstAttribute="centerX" secondItem="ILL-Dj-qMR" secondAttribute="centerX" id="4Aa-Af-rIv"/>
+                            <constraint firstItem="AbA-Ju-HpX" firstAttribute="centerY" secondItem="ILL-Dj-qMR" secondAttribute="centerY" id="iyS-t4-c3X"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="swq-B7-TFL"/>
                     </view>
                     <navigationItem key="navigationItem" title="App info" id="7Gw-XM-Bm2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4NC-28-yOO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1249" y="743"/>
+            <point key="canvasLocation" x="1246.376811594203" y="742.63392857142856"/>
         </scene>
         <!--App Info-->
         <scene sceneID="yJN-tG-moB">
