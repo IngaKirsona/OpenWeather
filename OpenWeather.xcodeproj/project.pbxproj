@@ -21,6 +21,7 @@
 		7A8643F3251653E300950A41 /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8643F2251653E300950A41 /* DesignableTextField.swift */; };
 		7A8643F72516558900950A41 /* BounceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8643F62516558900950A41 /* BounceButton.swift */; };
 		7A8643FA2516595600950A41 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8643F92516595600950A41 /* Extension.swift */; };
+		7A86440225167B4000950A41 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A86440125167B4000950A41 /* InfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		7A8643F2251653E300950A41 /* DesignableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableTextField.swift; sourceTree = "<group>"; };
 		7A8643F62516558900950A41 /* BounceButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BounceButton.swift; sourceTree = "<group>"; };
 		7A8643F92516595600950A41 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		7A86440125167B4000950A41 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				7A8643D12515DAF100950A41 /* WeatherViewController.swift */,
+				7A86440125167B4000950A41 /* InfoViewController.swift */,
 				7A8643E825160E3100950A41 /* ChangeCityViewController.swift */,
 			);
 			path = Controller;
@@ -221,6 +224,7 @@
 				7A8643F3251653E300950A41 /* DesignableTextField.swift in Sources */,
 				7A8643F1251610D300950A41 /* WeatherDataModel.swift in Sources */,
 				7A8643CE2515DAF100950A41 /* AppDelegate.swift in Sources */,
+				7A86440225167B4000950A41 /* InfoViewController.swift in Sources */,
 				7A8643F72516558900950A41 /* BounceButton.swift in Sources */,
 				7A8643D02515DAF100950A41 /* SceneDelegate.swift in Sources */,
 				7A8643E925160E3100950A41 /* ChangeCityViewController.swift in Sources */,
