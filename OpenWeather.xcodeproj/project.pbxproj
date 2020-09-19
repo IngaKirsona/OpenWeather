@@ -18,6 +18,8 @@
 		7A8643EC25160FCD00950A41 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7A8643EB25160FCD00950A41 /* Alamofire */; };
 		7A8643EF2516101C00950A41 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 7A8643EE2516101C00950A41 /* SwiftyJSON */; };
 		7A8643F1251610D300950A41 /* WeatherDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8643F0251610D300950A41 /* WeatherDataModel.swift */; };
+		7A8643F3251653E300950A41 /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8643F2251653E300950A41 /* DesignableTextField.swift */; };
+		7A8643F72516558900950A41 /* BounceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8643F62516558900950A41 /* BounceButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		7A8643E62515ED0700950A41 /* Neucha-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Neucha-Regular.ttf"; sourceTree = "<group>"; };
 		7A8643E825160E3100950A41 /* ChangeCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeCityViewController.swift; sourceTree = "<group>"; };
 		7A8643F0251610D300950A41 /* WeatherDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataModel.swift; sourceTree = "<group>"; };
+		7A8643F2251653E300950A41 /* DesignableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableTextField.swift; sourceTree = "<group>"; };
+		7A8643F62516558900950A41 /* BounceButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BounceButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +70,7 @@
 		7A8643CC2515DAF100950A41 /* OpenWeather */ = {
 			isa = PBXGroup;
 			children = (
-				7A8643E52515ECCB00950A41 /* Fonts */,
+				7A8643E52515ECCB00950A41 /* ExtraResource */,
 				7A8643E12515DE8F00950A41 /* AppDelegate */,
 				7A8643E42515DEC200950A41 /* Model */,
 				7A8643E22515DEA600950A41 /* Controller */,
@@ -112,12 +116,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		7A8643E52515ECCB00950A41 /* Fonts */ = {
+		7A8643E52515ECCB00950A41 /* ExtraResource */ = {
 			isa = PBXGroup;
 			children = (
 				7A8643E62515ED0700950A41 /* Neucha-Regular.ttf */,
+				7A8643F2251653E300950A41 /* DesignableTextField.swift */,
+				7A8643F62516558900950A41 /* BounceButton.swift */,
 			);
-			path = Fonts;
+			path = ExtraResource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,8 +207,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A8643D22515DAF100950A41 /* WeatherViewController.swift in Sources */,
+				7A8643F3251653E300950A41 /* DesignableTextField.swift in Sources */,
 				7A8643F1251610D300950A41 /* WeatherDataModel.swift in Sources */,
 				7A8643CE2515DAF100950A41 /* AppDelegate.swift in Sources */,
+				7A8643F72516558900950A41 /* BounceButton.swift in Sources */,
 				7A8643D02515DAF100950A41 /* SceneDelegate.swift in Sources */,
 				7A8643E925160E3100950A41 /* ChangeCityViewController.swift in Sources */,
 			);

@@ -14,7 +14,7 @@ protocol ChangeCityDelegate {
 class ChangeCityViewController: UIViewController {
     
     var delegate: ChangeCityDelegate?
-    @IBOutlet weak var cityTextField: UITextField!
+    @IBOutlet weak var cityTextField: DesignableTextField!
     
 
     @IBAction func getWeatherTapped(_ sender: Any) {
