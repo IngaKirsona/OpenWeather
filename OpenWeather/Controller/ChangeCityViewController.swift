@@ -18,7 +18,8 @@ class ChangeCityViewController: UIViewController {
     
 
     @IBAction func getWeatherTapped(_ sender: Any) {
-        guard  let cityName = cityTextField.text  else {
+        guard  let cityName = cityTextField.text, cityName != "" else {
+            warningPopUP(withTitle: "City name is empthy!", withMessage: "Please enter the city name!")
             return
         }
         delegate?.userEnteredNewCityName(city: cityName)

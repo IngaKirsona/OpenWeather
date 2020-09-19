@@ -20,6 +20,7 @@
 		7A8643F1251610D300950A41 /* WeatherDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8643F0251610D300950A41 /* WeatherDataModel.swift */; };
 		7A8643F3251653E300950A41 /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8643F2251653E300950A41 /* DesignableTextField.swift */; };
 		7A8643F72516558900950A41 /* BounceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8643F62516558900950A41 /* BounceButton.swift */; };
+		7A8643FA2516595600950A41 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8643F92516595600950A41 /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		7A8643F0251610D300950A41 /* WeatherDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataModel.swift; sourceTree = "<group>"; };
 		7A8643F2251653E300950A41 /* DesignableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableTextField.swift; sourceTree = "<group>"; };
 		7A8643F62516558900950A41 /* BounceButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BounceButton.swift; sourceTree = "<group>"; };
+		7A8643F92516595600950A41 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 		7A8643CC2515DAF100950A41 /* OpenWeather */ = {
 			isa = PBXGroup;
 			children = (
+				7A8643F82516591C00950A41 /* Extension */,
 				7A8643E52515ECCB00950A41 /* ExtraResource */,
 				7A8643E12515DE8F00950A41 /* AppDelegate */,
 				7A8643E42515DEC200950A41 /* Model */,
@@ -124,6 +127,14 @@
 				7A8643F62516558900950A41 /* BounceButton.swift */,
 			);
 			path = ExtraResource;
+			sourceTree = "<group>";
+		};
+		7A8643F82516591C00950A41 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				7A8643F92516595600950A41 /* Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +224,7 @@
 				7A8643F72516558900950A41 /* BounceButton.swift in Sources */,
 				7A8643D02515DAF100950A41 /* SceneDelegate.swift in Sources */,
 				7A8643E925160E3100950A41 /* ChangeCityViewController.swift in Sources */,
+				7A8643FA2516595600950A41 /* Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
