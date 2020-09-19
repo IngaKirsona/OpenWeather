@@ -10,11 +10,13 @@ import UIKit
 
 class InfoViewController: UIViewController {
 
+    @IBOutlet weak var appInfoLabel: UILabel!
+    var infoText = String()
+    let appDescText = "This app is a homework project.\n In this app you can see the weather info based on your current location.\n By tapping refresh 🔄 button user can specify city and get city's weather information."
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       
+        appInfoLabel.text = appDescText
     }
-    
-
 }

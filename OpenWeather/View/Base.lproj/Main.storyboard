@@ -20,7 +20,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="day_deer" translatesAutoresizingMaskIntoConstraints="NO" id="EBr-45-0BY">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="night_mountains" translatesAutoresizingMaskIntoConstraints="NO" id="EBr-45-0BY">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fJJ-Vl-OMB">
@@ -35,10 +35,10 @@
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TaM-Md-VNj">
-                                        <rect key="frame" x="49" y="128" width="192" height="240"/>
+                                        <rect key="frame" x="11.5" y="128" width="267" height="240"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jo5-gd-PoO">
-                                                <rect key="frame" x="0.0" y="0.0" width="192" height="116"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="267" height="116"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="116" id="bZW-ZL-9ZY"/>
@@ -48,7 +48,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="wS7-la-OOw">
-                                                <rect key="frame" x="0.0" y="124" width="192" height="116"/>
+                                                <rect key="frame" x="0.0" y="124" width="267" height="116"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="116" id="dnt-1a-dH0"/>
@@ -116,9 +116,7 @@
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Weather Info" image="cloud.sun.fill" catalog="system" id="5gZ-9s-POJ"/>
-                    <toolbarItems>
-                        <barButtonItem title="Item" id="l5j-IZ-oEk"/>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="cityLabel" destination="wS7-la-OOw" id="QzG-GY-caw"/>
@@ -231,11 +229,11 @@
             <objects>
                 <viewController id="a9x-0a-w82" customClass="InfoViewController" customModule="OpenWeather" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ILL-Dj-qMR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="744.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AbA-Ju-HpX">
-                                <rect key="frame" x="47.5" y="286.5" width="319" height="323"/>
+                                <rect key="frame" x="47.5" y="211" width="319" height="323"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="323" id="HHA-3H-tO6"/>
                                     <constraint firstAttribute="width" constant="319" id="fNk-C3-vo5"/>
@@ -253,6 +251,9 @@
                         <viewLayoutGuide key="safeArea" id="swq-B7-TFL"/>
                     </view>
                     <navigationItem key="navigationItem" title="App info" id="7Gw-XM-Bm2"/>
+                    <connections>
+                        <outlet property="appInfoLabel" destination="AbA-Ju-HpX" id="zHx-Fg-1VD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4NC-28-yOO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -264,9 +265,14 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Yim-w6-O7W" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="App Info" image="info.circle.fill" catalog="system" id="0lA-7k-9g5"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="t5E-Mr-rH6">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="t5E-Mr-rH6">
+                        <rect key="frame" x="0.0" y="44" width="414" height="107.5"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="Neucha" family="Neucha" pointSize="60"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -282,9 +288,9 @@
         <image name="arrow.2.circlepath" catalog="system" width="128" height="101"/>
         <image name="cloud.sun.fill" catalog="system" width="128" height="88"/>
         <image name="cloudy2" width="128" height="128"/>
-        <image name="day_deer" width="1242" height="2208"/>
         <image name="day_morning" width="236" height="511"/>
         <image name="info.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="night_mountains" width="750" height="1500"/>
         <image name="paperplane.fill" catalog="system" width="128" height="121"/>
     </resources>
 </document>
