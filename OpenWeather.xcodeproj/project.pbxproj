@@ -13,6 +13,7 @@
 		7A8643D52515DAF100950A41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A8643D32515DAF100950A41 /* Main.storyboard */; };
 		7A8643D72515DAF200950A41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A8643D62515DAF200950A41 /* Assets.xcassets */; };
 		7A8643DA2515DAF200950A41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A8643D82515DAF200950A41 /* LaunchScreen.storyboard */; };
+		7A8643E72515ED0700950A41 /* Neucha-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7A8643E62515ED0700950A41 /* Neucha-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		7A8643D62515DAF200950A41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A8643D92515DAF200950A41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A8643DB2515DAF200950A41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A8643E62515ED0700950A41 /* Neucha-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Neucha-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		7A8643CC2515DAF100950A41 /* OpenWeather */ = {
 			isa = PBXGroup;
 			children = (
+				7A8643E52515ECCB00950A41 /* Fonts */,
 				7A8643E12515DE8F00950A41 /* AppDelegate */,
 				7A8643E42515DEC200950A41 /* Model */,
 				7A8643E22515DEA600950A41 /* Controller */,
@@ -97,6 +100,14 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		7A8643E52515ECCB00950A41 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7A8643E62515ED0700950A41 /* Neucha-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A8643DA2515DAF200950A41 /* LaunchScreen.storyboard in Resources */,
+				7A8643E72515ED0700950A41 /* Neucha-Regular.ttf in Resources */,
 				7A8643D72515DAF200950A41 /* Assets.xcassets in Resources */,
 				7A8643D52515DAF100950A41 /* Main.storyboard in Resources */,
 			);
