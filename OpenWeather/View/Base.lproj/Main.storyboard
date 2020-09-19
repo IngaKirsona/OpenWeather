@@ -36,7 +36,7 @@
                                 <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TaM-Md-VNj">
-                                <rect key="frame" x="62" y="328" width="290" height="240"/>
+                                <rect key="frame" x="62" y="247" width="290" height="240"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jo5-gd-PoO">
                                         <rect key="frame" x="0.0" y="0.0" width="290" height="116"/>
@@ -70,7 +70,7 @@
                             <constraint firstItem="EBr-45-0BY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="F7I-Oc-Exk"/>
                             <constraint firstItem="EBr-45-0BY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Prv-qM-0eJ"/>
                             <constraint firstAttribute="bottom" secondItem="EBr-45-0BY" secondAttribute="bottom" id="e7Z-Pa-Ar0"/>
-                            <constraint firstItem="TaM-Md-VNj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="wJc-Jy-Ebh"/>
+                            <constraint firstItem="TaM-Md-VNj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-81" id="wJc-Jy-Ebh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -90,13 +90,41 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="day_morning" translatesAutoresizingMaskIntoConstraints="NO" id="7oF-0y-nLO">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="APt-cN-nhn">
+                                <rect key="frame" x="79.5" y="181" width="255" height="173"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter the City Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NVs-HV-vbc">
+                                        <rect key="frame" x="0.0" y="0.0" width="255" height="72"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="72" id="BMO-UE-zy7"/>
+                                            <constraint firstAttribute="width" constant="255" id="rP3-ZQ-vvQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uU8-Zz-sRv">
+                                        <rect key="frame" x="0.0" y="101" width="255" height="72"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="72" id="Yn6-Jc-zvA"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="255" id="sMx-w2-1qp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
+                                        <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <state key="normal" title="Get Weather">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="7oF-0y-nLO" firstAttribute="trailing" secondItem="ieT-Bq-EoR" secondAttribute="trailing" id="0ge-sO-gBm"/>
-                            <constraint firstAttribute="bottom" secondItem="7oF-0y-nLO" secondAttribute="bottom" id="PFV-xd-yHX"/>
-                            <constraint firstItem="7oF-0y-nLO" firstAttribute="top" secondItem="0Up-0h-5Ye" secondAttribute="top" id="bxb-n9-QJk"/>
-                            <constraint firstItem="7oF-0y-nLO" firstAttribute="leading" secondItem="ieT-Bq-EoR" secondAttribute="leading" id="dvt-Dl-Mfj"/>
+                            <constraint firstItem="7oF-0y-nLO" firstAttribute="top" secondItem="ieT-Bq-EoR" secondAttribute="top" id="IRr-wu-IDK"/>
+                            <constraint firstItem="7oF-0y-nLO" firstAttribute="centerX" secondItem="APt-cN-nhn" secondAttribute="centerX" id="SiC-lI-9bE"/>
+                            <constraint firstItem="7oF-0y-nLO" firstAttribute="leading" secondItem="ieT-Bq-EoR" secondAttribute="leading" id="Vdp-1y-PXz"/>
+                            <constraint firstItem="7oF-0y-nLO" firstAttribute="centerY" secondItem="0Up-0h-5Ye" secondAttribute="centerY" id="XeN-eR-e51"/>
+                            <constraint firstItem="APt-cN-nhn" firstAttribute="centerX" secondItem="0Up-0h-5Ye" secondAttribute="centerX" id="aRE-dR-5k4"/>
+                            <constraint firstItem="APt-cN-nhn" firstAttribute="centerY" secondItem="0Up-0h-5Ye" secondAttribute="centerY" constant="-153.5" id="jwo-bM-K1s"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ieT-Bq-EoR"/>
                     </view>
