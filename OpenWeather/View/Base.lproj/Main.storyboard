@@ -23,17 +23,6 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="night_mountains" translatesAutoresizingMaskIntoConstraints="NO" id="EBr-45-0BY">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v5D-DX-qL8">
-                                <rect key="frame" x="13" y="64" width="31" height="25"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
-                                <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <state key="normal" image="arrow.2.circlepath" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="heavy"/>
-                                </state>
-                                <connections>
-                                    <segue destination="0Co-XM-3rp" kind="show" identifier="changeCityName" id="YHO-S7-PwE"/>
-                                </connections>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fJJ-Vl-OMB">
                                 <rect key="frame" x="62" y="80" width="290" height="368"/>
                                 <subviews>
@@ -72,11 +61,24 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v5D-DX-qL8">
+                                <rect key="frame" x="366" y="64" width="32" height="25"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" image="arrow.2.circlepath" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="heavy"/>
+                                </state>
+                                <connections>
+                                    <segue destination="0Co-XM-3rp" kind="show" identifier="changeCityName" id="YHO-S7-PwE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="EBr-45-0BY" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="3rf-xl-SKr"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="v5D-DX-qL8" secondAttribute="trailing" constant="16" id="7Lx-6N-scN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="v5D-DX-qL8" secondAttribute="trailing" constant="16" id="7Lx-6N-scN">
+                                <variation key="heightClass=regular-widthClass=compact" constant="16"/>
+                            </constraint>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fJJ-Vl-OMB" secondAttribute="trailing" constant="62" id="BZT-Mv-FaR"/>
                             <constraint firstItem="fJJ-Vl-OMB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="62" id="Bn1-XC-UzX"/>
                             <constraint firstItem="EBr-45-0BY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="F7I-Oc-Exk"/>
@@ -84,7 +86,9 @@
                             <constraint firstItem="EBr-45-0BY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Prv-qM-0eJ"/>
                             <constraint firstItem="fJJ-Vl-OMB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="36" id="UPJ-RI-VDY"/>
                             <constraint firstItem="fJJ-Vl-OMB" firstAttribute="centerX" secondItem="EBr-45-0BY" secondAttribute="centerX" id="Wsc-1x-09B"/>
-                            <constraint firstItem="v5D-DX-qL8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="a4L-Nx-4qh"/>
+                            <constraint firstItem="v5D-DX-qL8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="a4L-Nx-4qh">
+                                <variation key="heightClass=regular-widthClass=compact" constant="20"/>
+                            </constraint>
                             <constraint firstAttribute="bottom" secondItem="EBr-45-0BY" secondAttribute="bottom" id="e7Z-Pa-Ar0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="fJJ-Vl-OMB" secondAttribute="bottom" constant="156" id="fIb-7a-jKc"/>
                         </constraints>
