@@ -59,8 +59,33 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate{
                 print("Got weather data")
                 let weatherJSON:JSON = JSON(response.value!)
                 print("weatherJSON: ", weatherJSON)
+                self.updateWeatherData(json: weatherJSON)
+            }else{
+                print("error\(String(describing:response.error))")
+                self.cityLabel.text = "Connection Issues ⛔️"
             }
         }
+        
+    }
+    //MARK: - JSON Parsing with SwiftyJSON
+    func updateWeatherData(json : JSON){
+        if let tempResult = json["main"]["temp"].double{
+            weatherDataModel.temp = Int(tempResult - 273.15)
+            weatherDataModel.city = json["name"].stringValue
+            weatherDataModel.condition = json["weather"] [0]["id"].intValue
+            weatherDataModel.weatherIconName = weatherDataModel.updateWeatherIcon(condition: weatherDataModel.condition)
+            updateUIWithWeatherData()
+        }else{
+//-------> in hometask use ui alert controller, have extension with alertcontroller, present ecerything on alertcontroller
+            self.cityLabel.text = "Connection Issues ⛔️"
+        }
+    }
+    //MARK: Update UI
+//-------> update Ui with new weather data
+    func updateUIWithWeatherData(){
+        cityLabel.text = weatherDataModel.city
+        temperatureLabel.text = "\(weatherDataModel.temp)°"
+        weatherIcon.image = UIImage(named: weatherDataModel.weatherIconName)
         
     }
 }
