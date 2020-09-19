@@ -10,7 +10,7 @@ import Foundation
 
 
 class WeatherDataModel{
-    let apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=riga&appid=07b4f6be8ea08861f2c833d09b334e2f"
+    let apiUrl = "https://api.openweathermap.org/data/2.5/weather"
     let apiId = "07b4f6be8ea08861f2c833d09b334e2f"
     
     var temp: Int = 0

@@ -11,7 +11,7 @@ import CoreLocation
 import Alamofire
 import SwiftyJSON
 
-class WeatherViewController: UIViewController, CLLocationManagerDelegate{
+class WeatherViewController: UIViewController, CLLocationManagerDelegate, ChangeCityDelegate {
     
     let weatherDataModel = WeatherDataModel()
     let locationManager = CLLocationManager()
@@ -39,8 +39,8 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate{
             
             let latitude = String(location.coordinate.latitude)
             let longitude = String (location.coordinate.longitude)
-            
-            let params: [String: String] = ["lat": latitude, "long": longitude, "appid": weatherDataModel.apiId]
+//-------> longitude and latitude is only for current location
+            let params: [String: String] = ["lat": latitude, "lon": longitude, "appid": weatherDataModel.apiId]
             getWeatherData(url: weatherDataModel.apiUrl, parameters: params)
         }
     }
@@ -48,7 +48,7 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate{
 //-------> if something went wrong with requesting weather, this will appear
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Error: ", error)
-        cityLabel.text = "Weather Unavailable ⛔️"
+        cityLabel.text = "Weather Unavailable!"
     }
 
     //MARK: Networking
@@ -62,7 +62,7 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate{
                 self.updateWeatherData(json: weatherJSON)
             }else{
                 print("error\(String(describing:response.error))")
-                self.cityLabel.text = "Connection Issues ⛔️"
+                self.cityLabel.text = "Connection Issues!"
             }
         }
         
@@ -77,7 +77,7 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate{
             updateUIWithWeatherData()
         }else{
 //-------> in hometask use ui alert controller, have extension with alertcontroller, present ecerything on alertcontroller
-            self.cityLabel.text = "Connection Issues ⛔️"
+            self.cityLabel.text = "Weather Unavailable!"
         }
     }
     //MARK: Update UI
@@ -86,7 +86,24 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate{
         cityLabel.text = weatherDataModel.city
         temperatureLabel.text = "\(weatherDataModel.temp)°"
         weatherIcon.image = UIImage(named: weatherDataModel.weatherIconName)
-        
+    }
+    
+    //MARK: Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "changeCityName" {
+            let destinationVC = segue.destination as!
+            ChangeCityViewController
+//-------> it will pass back what we are typing in the text field
+            destinationVC.delegate = self
+        }
+    }
+    
+    
+    //MARK: - ChangeCityDelegate Delegate
+    func userEnteredNewCityName(city: String) {
+        print(city)
+        let params: [String: String] = ["q": city,"appid": weatherDataModel.apiId]
+        getWeatherData(url: weatherDataModel.apiUrl, parameters: params)
     }
 }
 

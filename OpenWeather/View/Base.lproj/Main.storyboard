@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="me4-K8-C6f">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -12,7 +12,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Weather View Controller-->
+        <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="WeatherViewController" customModule="OpenWeather" customModuleProvider="target" sceneMemberID="viewController">
@@ -44,10 +44,10 @@
                                                     <constraint firstAttribute="height" constant="116" id="bZW-ZL-9ZY"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Neucha" family="Neucha" pointSize="70"/>
-                                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wS7-la-OOw">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="wS7-la-OOw">
                                                 <rect key="frame" x="0.0" y="124" width="192" height="116"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -115,6 +115,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="5gZ-9s-POJ"/>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="cityLabel" destination="wS7-la-OOw" id="QzG-GY-caw"/>
                         <outlet property="temperatureLabel" destination="jo5-gd-PoO" id="rsM-eG-NO0"/>
@@ -123,25 +126,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-468.11594202898556" y="63.616071428571423"/>
+            <point key="canvasLocation" x="442.02898550724643" y="63.616071428571423"/>
         </scene>
         <!--Change City View Controller-->
         <scene sceneID="LRw-ld-8lT">
             <objects>
                 <viewController id="0Co-XM-3rp" customClass="ChangeCityViewController" customModule="OpenWeather" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Up-0h-5Ye">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="day_morning" translatesAutoresizingMaskIntoConstraints="NO" id="7oF-0y-nLO">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="808"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="APt-cN-nhn">
-                                <rect key="frame" x="79.5" y="181" width="255" height="173"/>
+                                <rect key="frame" x="79.5" y="208" width="255" height="173"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter the City Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NVs-HV-vbc">
                                         <rect key="frame" x="0.0" y="0.0" width="255" height="72"/>
-                                        <color key="backgroundColor" systemColor="tertiaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="72" id="BMO-UE-zy7"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="255" id="rP3-ZQ-vvQ"/>
@@ -151,7 +155,6 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uU8-Zz-sRv">
                                         <rect key="frame" x="0.0" y="101" width="255" height="72"/>
-                                        <color key="backgroundColor" systemColor="tertiaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="72" id="Yn6-Jc-zvA"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="255" id="sMx-w2-1qp"/>
@@ -186,7 +189,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ckY-yQ-fQo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="292.75362318840581" y="63.616071428571423"/>
+            <point key="canvasLocation" x="1202.8985507246377" y="63.616071428571423"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="3Ln-Ok-puw">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="me4-K8-C6f" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Fpr-gJ-9c4">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="E2Y-8V-7Mk"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bR4-iM-llC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-328" y="548"/>
         </scene>
     </scenes>
     <resources>
