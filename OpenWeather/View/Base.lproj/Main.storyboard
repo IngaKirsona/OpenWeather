@@ -213,7 +213,7 @@
                                             <constraint firstAttribute="height" constant="72" id="BMO-UE-zy7"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="255" id="rP3-ZQ-vvQ"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Neucha" family="Neucha" pointSize="28"/>
+                                        <fontDescription key="fontDescription" name="Neucha" family="Neucha" pointSize="25"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -223,7 +223,7 @@
                                                 <real key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
-                                                <real key="value" value="2"/>
+                                                <real key="value" value="13"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="paperplane.fill" catalog="system"/>
                                         </userDefinedRuntimeAttributes>
@@ -296,13 +296,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="744.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AbA-Ju-HpX">
-                                <rect key="frame" x="47.5" y="211" width="319" height="323"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="AbA-Ju-HpX">
+                                <rect key="frame" x="47.5" y="124" width="319" height="323"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="323" id="HHA-3H-tO6"/>
                                     <constraint firstAttribute="width" constant="319" id="fNk-C3-vo5"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Neucha" family="Neucha" pointSize="33"/>
+                                <fontDescription key="fontDescription" name="Neucha" family="Neucha" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -310,7 +310,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="AbA-Ju-HpX" firstAttribute="centerX" secondItem="ILL-Dj-qMR" secondAttribute="centerX" id="4Aa-Af-rIv"/>
-                            <constraint firstItem="AbA-Ju-HpX" firstAttribute="centerY" secondItem="ILL-Dj-qMR" secondAttribute="centerY" id="iyS-t4-c3X"/>
+                            <constraint firstItem="AbA-Ju-HpX" firstAttribute="centerY" secondItem="ILL-Dj-qMR" secondAttribute="centerY" constant="-86.75" id="iyS-t4-c3X"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="swq-B7-TFL"/>
                     </view>
@@ -331,8 +331,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="sectionIndexColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="sectionIndexBackgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="webCell" textLabel="9Ei-gK-rWp" style="IBUITableViewCellStyleDefault" id="dIU-jR-F36">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="webCell" textLabel="9Ei-gK-rWp" imageView="4uV-Yq-xhf" style="IBUITableViewCellStyleDefault" id="dIU-jR-F36">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dIU-jR-F36" id="RiY-aR-pgE">
@@ -340,14 +342,19 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9Ei-gK-rWp">
-                                            <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                            <rect key="frame" x="59" y="0.0" width="335" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="chevron.right.circle.fill" catalog="system" id="4uV-Yq-xhf">
+                                            <rect key="frame" x="22" y="12" width="20" height="19"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -400,9 +407,15 @@
             <objects>
                 <navigationController id="xQN-yO-BFn" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Other apps" image="app.fill" catalog="system" id="hab-PE-lgi"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nOo-NK-wll">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="nOo-NK-wll">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Neucha" family="Neucha" pointSize="33"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="Neucha" family="Neucha" pointSize="40"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="f4i-E0-IFm" kind="relationship" relationship="rootViewController" id="GUV-C3-KYq"/>
@@ -459,6 +472,7 @@
     <resources>
         <image name="app.fill" catalog="system" width="128" height="114"/>
         <image name="arrow.2.circlepath" catalog="system" width="128" height="101"/>
+        <image name="chevron.right.circle.fill" catalog="system" width="128" height="121"/>
         <image name="cloud.sun.fill" catalog="system" width="128" height="88"/>
         <image name="cloudy2" width="128" height="128"/>
         <image name="day_morning" width="236" height="511"/>

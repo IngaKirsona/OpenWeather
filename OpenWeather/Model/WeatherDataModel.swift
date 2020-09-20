@@ -19,7 +19,7 @@ class WeatherDataModel{
     var weatherIconName: String = ""
     
     func updateWeatherIcon(condition: Int) -> String {
-    switch (condition) {
+        switch (condition) {
         case 0...300 :
             return "tstorm1"
         case 301...500 :

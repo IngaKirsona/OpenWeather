@@ -24,7 +24,7 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate, Change
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager.delegate = self
-//-------> how accurate location will be
+        //-------> how accurate location will be
         locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
@@ -39,18 +39,19 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate, Change
             
             let latitude = String(location.coordinate.latitude)
             let longitude = String (location.coordinate.longitude)
-//-------> longitude and latitude is only for current location
+            //-------> longitude and latitude is only for current location
             let params: [String: String] = ["lat": latitude, "lon": longitude, "appid": weatherDataModel.apiId]
             getWeatherData(url: weatherDataModel.apiUrl, parameters: params)
         }
     }
     
-//-------> if something went wrong with requesting weather, this will appear
+    //-------> if something went wrong with requesting weather, this will appear
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Error: ", error)
-        cityLabel.text = "Weather Unavailable!"
+        warningPopUP(withTitle: "Weather Unavailable!", withMessage: nil)
+        
     }
-
+    
     //MARK: Networking
     func getWeatherData(url: String, parameters: [String: String]){
         
@@ -62,7 +63,7 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate, Change
                 self.updateWeatherData(json: weatherJSON)
             }else{
                 print("error\(String(describing:response.error))")
-                self.cityLabel.text = "Connection Issues!"
+                self.warningPopUP(withTitle: "Connection Issues!", withMessage: nil)
             }
         }
         
@@ -76,12 +77,12 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate, Change
             weatherDataModel.weatherIconName = weatherDataModel.updateWeatherIcon(condition: weatherDataModel.condition)
             updateUIWithWeatherData()
         }else{
-//-------> in hometask use ui alert controller, have extension with alertcontroller, present ecerything on alertcontroller
-            self.cityLabel.text = "Weather Unavailable!"
+            warningPopUP(withTitle: "Weather Unavailable!", withMessage: nil)
+            
         }
     }
     //MARK: Update UI
-//-------> update Ui with new weather data
+    //-------> update Ui with new weather data
     func updateUIWithWeatherData(){
         cityLabel.text = weatherDataModel.city
         temperatureLabel.text = "\(weatherDataModel.temp)°"
@@ -93,7 +94,7 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate, Change
         if segue.identifier == "changeCityName" {
             let destinationVC = segue.destination as!
             ChangeCityViewController
-//-------> it will pass back what we are typing in the text field
+            //-------> it will pass back what we are typing in the text field
             destinationVC.delegate = self
         }
     }

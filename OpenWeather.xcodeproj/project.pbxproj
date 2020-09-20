@@ -84,8 +84,8 @@
 				7A8643E52515ECCB00950A41 /* ExtraResource */,
 				7A8643E12515DE8F00950A41 /* AppDelegate */,
 				7A8643E42515DEC200950A41 /* Model */,
-				7A8643E22515DEA600950A41 /* Controller */,
 				7A8643E32515DEB100950A41 /* View */,
+				7A8643E22515DEA600950A41 /* Controller */,
 				7A8643D62515DAF200950A41 /* Assets.xcassets */,
 				7A8643D82515DAF200950A41 /* LaunchScreen.storyboard */,
 				7A8643DB2515DAF200950A41 /* Info.plist */,
@@ -106,11 +106,11 @@
 			isa = PBXGroup;
 			children = (
 				7A8643D12515DAF100950A41 /* WeatherViewController.swift */,
+				7A8643E825160E3100950A41 /* ChangeCityViewController.swift */,
 				7A86440725175B9000950A41 /* WebViewController.swift */,
 				7A86440525175B2D00950A41 /* ListTableViewController.swift */,
 				7A8644032517507100950A41 /* AppearenceViewController.swift */,
 				7A86440125167B4000950A41 /* InfoViewController.swift */,
-				7A8643E825160E3100950A41 /* ChangeCityViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

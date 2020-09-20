@@ -10,24 +10,24 @@ import UIKit
 import WebKit
 
 class WebViewController: UIViewController, WKNavigationDelegate {
-
+    
     
     @IBOutlet var webView: WKWebView!
     
     var passedValue = ""
+    
+    override func loadView() {
+        self.title = "WebView"
+        webView = WKWebView()
+        webView.navigationDelegate = self
+        view = webView
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
-        override func loadView() {
-            self.title = "WebView"
-            webView = WKWebView()
-            webView.navigationDelegate = self
-            view = webView
-        }
-        
-        override func viewDidLoad() {
-            super.viewDidLoad()
-
-           let url = URL(string: passedValue)
-            webView.load(URLRequest(url: url!))
-            webView.allowsBackForwardNavigationGestures = true
-        }
+        let url = URL(string: passedValue)
+        webView.load(URLRequest(url: url!))
+        webView.allowsBackForwardNavigationGestures = true
+    }
 }
