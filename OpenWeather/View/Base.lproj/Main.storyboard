@@ -12,7 +12,59 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Weather Info-->
+        <!--Appearence View Controller-->
+        <scene sceneID="4NL-vU-j5z">
+            <objects>
+                <viewController id="Yp5-Rw-qyD" customClass="AppearenceViewController" customModule="OpenWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vMZ-u1-afZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="Zfn-ka-T6P">
+                                <rect key="frame" x="65.5" y="280" width="283" height="336"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Light Mode is On" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blf-MZ-RMT">
+                                        <rect key="frame" x="0.0" y="0.0" width="283" height="226"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="283" id="Ydf-zy-qKa"/>
+                                            <constraint firstAttribute="height" constant="226" id="fTe-ne-0jw"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Neucha" family="Neucha" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RgH-AR-3D8">
+                                        <rect key="frame" x="48" y="263" width="187" height="73"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="187" id="Cmi-Jp-ULV"/>
+                                            <constraint firstAttribute="height" constant="73" id="xEA-jN-Cpj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Neucha" family="Neucha" pointSize="21"/>
+                                        <state key="normal" title="Open Settings"/>
+                                        <connections>
+                                            <action selector="openSettingsTapped:" destination="Yp5-Rw-qyD" eventType="touchUpInside" id="ZDK-Sa-x5L"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Zfn-ka-T6P" firstAttribute="centerY" secondItem="vMZ-u1-afZ" secondAttribute="centerY" id="vNe-Ni-kbF"/>
+                            <constraint firstItem="Zfn-ka-T6P" firstAttribute="centerX" secondItem="vMZ-u1-afZ" secondAttribute="centerX" id="zn5-Cy-ygx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RU5-Pn-dAv"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8a7-VO-xOM"/>
+                    <connections>
+                        <outlet property="textLabel" destination="blf-MZ-RMT" id="aD1-R7-XJq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wYc-Wo-8wF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1169.5652173913045" y="-616.07142857142856"/>
+        </scene>
+        <!--Weather View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="WeatherViewController" customModule="OpenWeather" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,11 +72,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="night_mountains" translatesAutoresizingMaskIntoConstraints="NO" id="EBr-45-0BY">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="day_morning" translatesAutoresizingMaskIntoConstraints="NO" id="EBr-45-0BY">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fJJ-Vl-OMB">
-                                <rect key="frame" x="62" y="114" width="290" height="368"/>
+                                <rect key="frame" x="62" y="158" width="290" height="368"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloudy2" translatesAutoresizingMaskIntoConstraints="NO" id="bZU-fS-8Vh">
                                         <rect key="frame" x="85" y="0.0" width="120" height="120"/>
@@ -35,26 +87,24 @@
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TaM-Md-VNj">
-                                        <rect key="frame" x="49" y="128" width="192" height="240"/>
+                                        <rect key="frame" x="11.5" y="128" width="267" height="240"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jo5-gd-PoO">
-                                                <rect key="frame" x="0.0" y="0.0" width="192" height="116"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="267" height="116"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="116" id="bZW-ZL-9ZY"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Neucha" family="Neucha" pointSize="70"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="wS7-la-OOw">
-                                                <rect key="frame" x="0.0" y="124" width="192" height="116"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <rect key="frame" x="0.0" y="124" width="267" height="116"/>
+                                                <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="116" id="dnt-1a-dH0"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Neucha" family="Neucha" pointSize="60"/>
-                                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -62,23 +112,26 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2sG-cp-bJe" customClass="BounceButton" customModule="OpenWeather" customModuleProvider="target">
-                                <rect key="frame" x="20" y="51" width="50" height="50"/>
+                                <rect key="frame" x="20" y="95" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="yoX-Lo-7sP"/>
                                 </constraints>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" image="moon" catalog="system">
                                     <attributedString key="attributedTitle"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="heavy"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Yp5-Rw-qyD" kind="show" id="5Zo-qc-47H"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v5D-DX-qL8" customClass="BounceButton" customModule="OpenWeather" customModuleProvider="target">
-                                <rect key="frame" x="344" y="51" width="50" height="50"/>
+                                <rect key="frame" x="344" y="95" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="GR2-3f-YFZ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
-                                <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" image="arrow.2.circlepath" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="heavy"/>
                                 </state>
@@ -125,8 +178,8 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Weather Info" image="cloud.sun.fill" catalog="system" id="5gZ-9s-POJ"/>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="lvb-Mt-5ai"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="cityLabel" destination="wS7-la-OOw" id="QzG-GY-caw"/>
@@ -136,7 +189,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="439.13043478260875" y="62.276785714285708"/>
+            <point key="canvasLocation" x="1172" y="62"/>
         </scene>
         <!--Change City View Controller-->
         <scene sceneID="LRw-ld-8lT">
@@ -147,13 +200,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="day_morning" translatesAutoresizingMaskIntoConstraints="NO" id="7oF-0y-nLO">
-                                <rect key="frame" x="0.0" y="44" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="720"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="APt-cN-nhn">
-                                <rect key="frame" x="79.5" y="208" width="255" height="173"/>
+                                <rect key="frame" x="65" y="208" width="284.5" height="173"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter the City Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NVs-HV-vbc" customClass="DesignableTextField" customModule="OpenWeather" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="255" height="72"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="284.5" height="72"/>
                                         <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -176,7 +229,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uU8-Zz-sRv" customClass="BounceButton" customModule="OpenWeather" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="101" width="255" height="72"/>
+                                        <rect key="frame" x="0.0" y="101" width="284.5" height="72"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="72" id="Yn6-Jc-zvA"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="255" id="sMx-w2-1qp"/>
@@ -184,7 +237,7 @@
                                         <fontDescription key="fontDescription" name="Neucha" family="Neucha" pointSize="50"/>
                                         <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <state key="normal" title="Get Weather">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                         <connections>
                                             <action selector="getWeatherTapped:" destination="0Co-XM-3rp" eventType="touchUpInside" id="0UC-iX-oSR"/>
@@ -211,7 +264,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ckY-yQ-fQo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1202.8985507246377" y="63.616071428571423"/>
+            <point key="canvasLocation" x="1881" y="62"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="3Ln-Ok-puw">
@@ -226,7 +279,7 @@
                         <color key="selectedImageTintColor" cocoaTouchSystemColor="darkTextColor"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="E2Y-8V-7Mk"/>
+                        <segue destination="VkX-Z4-csI" kind="relationship" relationship="viewControllers" id="E2Y-8V-7Mk"/>
                         <segue destination="Yim-w6-O7W" kind="relationship" relationship="viewControllers" id="AL5-C7-08U"/>
                     </connections>
                 </tabBarController>
@@ -293,6 +346,25 @@
             </objects>
             <point key="canvasLocation" x="442" y="743"/>
         </scene>
+        <!--Weather Info-->
+        <scene sceneID="13j-zB-fYE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VkX-Z4-csI" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Weather Info" image="cloud.sun.fill" catalog="system" id="5gZ-9s-POJ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="r34-U4-TCM">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="rsG-T0-eAg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L9d-nx-xfA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="439.13043478260875" y="62.276785714285708"/>
+        </scene>
     </scenes>
     <resources>
         <image name="arrow.2.circlepath" catalog="system" width="128" height="101"/>
@@ -301,7 +373,6 @@
         <image name="day_morning" width="236" height="511"/>
         <image name="info.circle.fill" catalog="system" width="128" height="121"/>
         <image name="moon" catalog="system" width="128" height="121"/>
-        <image name="night_mountains" width="750" height="1500"/>
         <image name="paperplane.fill" catalog="system" width="128" height="121"/>
     </resources>
 </document>
