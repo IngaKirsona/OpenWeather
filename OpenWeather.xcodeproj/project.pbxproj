@@ -23,6 +23,8 @@
 		7A8643FA2516595600950A41 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8643F92516595600950A41 /* Extension.swift */; };
 		7A86440225167B4000950A41 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A86440125167B4000950A41 /* InfoViewController.swift */; };
 		7A8644042517507100950A41 /* AppearenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8644032517507100950A41 /* AppearenceViewController.swift */; };
+		7A86440625175B2D00950A41 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A86440525175B2D00950A41 /* ListTableViewController.swift */; };
+		7A86440825175B9000950A41 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A86440725175B9000950A41 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		7A8643F92516595600950A41 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		7A86440125167B4000950A41 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		7A8644032517507100950A41 /* AppearenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearenceViewController.swift; sourceTree = "<group>"; };
+		7A86440525175B2D00950A41 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
+		7A86440725175B9000950A41 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				7A8643D12515DAF100950A41 /* WeatherViewController.swift */,
+				7A86440725175B9000950A41 /* WebViewController.swift */,
+				7A86440525175B2D00950A41 /* ListTableViewController.swift */,
 				7A8644032517507100950A41 /* AppearenceViewController.swift */,
 				7A86440125167B4000950A41 /* InfoViewController.swift */,
 				7A8643E825160E3100950A41 /* ChangeCityViewController.swift */,
@@ -230,7 +236,9 @@
 				7A86440225167B4000950A41 /* InfoViewController.swift in Sources */,
 				7A8643F72516558900950A41 /* BounceButton.swift in Sources */,
 				7A8644042517507100950A41 /* AppearenceViewController.swift in Sources */,
+				7A86440825175B9000950A41 /* WebViewController.swift in Sources */,
 				7A8643D02515DAF100950A41 /* SceneDelegate.swift in Sources */,
+				7A86440625175B2D00950A41 /* ListTableViewController.swift in Sources */,
 				7A8643E925160E3100950A41 /* ChangeCityViewController.swift in Sources */,
 				7A8643FA2516595600950A41 /* Extension.swift in Sources */,
 			);
