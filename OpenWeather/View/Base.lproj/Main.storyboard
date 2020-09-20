@@ -64,7 +64,7 @@
             </objects>
             <point key="canvasLocation" x="1169.5652173913045" y="-616.07142857142856"/>
         </scene>
-        <!--Weather View Controller-->
+        <!--Find out the weather-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="WeatherViewController" customModule="OpenWeather" customModuleProvider="target" sceneMemberID="viewController">
@@ -117,7 +117,7 @@
                                     <constraint firstAttribute="width" constant="50" id="yoX-Lo-7sP"/>
                                 </constraints>
                                 <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <state key="normal" image="moon" catalog="system">
+                                <state key="normal" image="moon.fill" catalog="system">
                                     <attributedString key="attributedTitle"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="heavy"/>
                                 </state>
@@ -136,7 +136,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="heavy"/>
                                 </state>
                                 <connections>
-                                    <segue destination="0Co-XM-3rp" kind="show" identifier="changeCityName" id="YHO-S7-PwE"/>
+                                    <segue destination="0Co-XM-3rp" kind="presentation" identifier="changeCityName" id="553-iq-URw"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -179,7 +179,7 @@
                         </variation>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="lvb-Mt-5ai"/>
+                    <navigationItem key="navigationItem" title="Find out the weather" id="lvb-Mt-5ai"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="cityLabel" destination="wS7-la-OOw" id="QzG-GY-caw"/>
@@ -196,17 +196,17 @@
             <objects>
                 <viewController id="0Co-XM-3rp" customClass="ChangeCityViewController" customModule="OpenWeather" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Up-0h-5Ye">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="day_morning" translatesAutoresizingMaskIntoConstraints="NO" id="7oF-0y-nLO">
-                                <rect key="frame" x="0.0" y="88" width="414" height="720"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="APt-cN-nhn">
-                                <rect key="frame" x="79.5" y="208" width="255" height="173"/>
+                                <rect key="frame" x="67.5" y="181" width="279" height="173"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter the City Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NVs-HV-vbc" customClass="DesignableTextField" customModule="OpenWeather" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="255" height="72"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="279" height="72"/>
                                         <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -229,7 +229,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uU8-Zz-sRv" customClass="BounceButton" customModule="OpenWeather" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="101" width="255" height="72"/>
+                                        <rect key="frame" x="0.0" y="101" width="279" height="72"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="72" id="Yn6-Jc-zvA"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="255" id="sMx-w2-1qp"/>
@@ -286,18 +286,18 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bR4-iM-llC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-328" y="548"/>
+            <point key="canvasLocation" x="-409" y="595"/>
         </scene>
         <!--App info-->
         <scene sceneID="B8G-hi-N0V">
             <objects>
                 <viewController id="a9x-0a-w82" customClass="InfoViewController" customModule="OpenWeather" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ILL-Dj-qMR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="744.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="AbA-Ju-HpX">
-                                <rect key="frame" x="47.5" y="124" width="319" height="323"/>
+                                <rect key="frame" x="47.5" y="287" width="319" height="323"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="323" id="HHA-3H-tO6"/>
                                     <constraint firstAttribute="width" constant="319" id="fNk-C3-vo5"/>
@@ -307,10 +307,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.51013165709999997" green="0.61083865169999996" blue="0.68236070869999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="AbA-Ju-HpX" firstAttribute="centerX" secondItem="ILL-Dj-qMR" secondAttribute="centerX" id="4Aa-Af-rIv"/>
-                            <constraint firstItem="AbA-Ju-HpX" firstAttribute="centerY" secondItem="ILL-Dj-qMR" secondAttribute="centerY" constant="-86.75" id="iyS-t4-c3X"/>
+                            <constraint firstItem="AbA-Ju-HpX" firstAttribute="centerY" secondItem="ILL-Dj-qMR" secondAttribute="centerY" constant="0.5" id="iyS-t4-c3X"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="swq-B7-TFL"/>
                     </view>
@@ -321,7 +321,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4NC-28-yOO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1246.376811594203" y="742.63392857142856"/>
+            <point key="canvasLocation" x="1171" y="743"/>
         </scene>
         <!--Git Repositories-->
         <scene sceneID="aCo-PI-JYi">
@@ -330,9 +330,10 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="3Nb-QR-uux">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.51013165709999997" green="0.61083865169999996" blue="0.68236070869999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="sectionIndexColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <color key="sectionIndexBackgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="sectionIndexTrackingBackgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="webCell" textLabel="9Ei-gK-rWp" imageView="4uV-Yq-xhf" style="IBUITableViewCellStyleDefault" id="dIU-jR-F36">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
@@ -354,6 +355,7 @@
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.51013165709999997" green="0.61083865169999996" blue="0.68236070869999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                             </tableViewCell>
                         </prototypes>
@@ -366,7 +368,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vUr-zR-pBd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1301" y="1454"/>
+            <point key="canvasLocation" x="1171" y="1454"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="PFE-sc-cDr">
@@ -400,15 +402,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bbp-n0-HbH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2134.7826086956525" y="1453.7946428571429"/>
+            <point key="canvasLocation" x="1880" y="1454"/>
         </scene>
         <!--Other apps-->
         <scene sceneID="DtX-ac-fCL">
             <objects>
                 <navigationController id="xQN-yO-BFn" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Other apps" image="app.fill" catalog="system" id="hab-PE-lgi"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="nOo-NK-wll">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                    <tabBarItem key="tabBarItem" title="Other apps" image="app.fill" catalog="system" id="hab-PE-lgi">
+                        <color key="badgeColor" red="0.57462468950000001" green="0.66042005879999999" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nOo-NK-wll">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Neucha" family="Neucha" pointSize="33"/>
@@ -423,7 +427,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gcm-UJ-6DM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="382" y="1454"/>
+            <point key="canvasLocation" x="441" y="1454"/>
         </scene>
         <!--App Info-->
         <scene sceneID="yJN-tG-moB">
@@ -431,12 +435,14 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Yim-w6-O7W" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="App Info" image="info.circle.fill" catalog="system" id="0lA-7k-9g5"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="t5E-Mr-rH6">
-                        <rect key="frame" x="0.0" y="44" width="414" height="107.5"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="t5E-Mr-rH6">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Neucha" family="Neucha" pointSize="36"/>
+                        </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
                             <fontDescription key="fontDescription" name="Neucha" family="Neucha" pointSize="60"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <color key="textShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>
@@ -458,6 +464,12 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="r34-U4-TCM">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Neucha" family="Neucha" pointSize="30"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="Neucha" family="Neucha" pointSize="50"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -475,9 +487,9 @@
         <image name="chevron.right.circle.fill" catalog="system" width="128" height="121"/>
         <image name="cloud.sun.fill" catalog="system" width="128" height="88"/>
         <image name="cloudy2" width="128" height="128"/>
-        <image name="day_morning" width="236" height="511"/>
+        <image name="day_morning" width="564" height="1017"/>
         <image name="info.circle.fill" catalog="system" width="128" height="121"/>
-        <image name="moon" catalog="system" width="128" height="121"/>
+        <image name="moon.fill" catalog="system" width="128" height="121"/>
         <image name="paperplane.fill" catalog="system" width="128" height="121"/>
     </resources>
 </document>

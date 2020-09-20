@@ -15,12 +15,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="day_morning" translatesAutoresizingMaskIntoConstraints="NO" id="4QN-7g-CiY">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="day_morning" translatesAutoresizingMaskIntoConstraints="NO" id="7pu-KG-5Nz">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="921"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="7pu-KG-5Nz" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="0FL-no-Zkn"/>
+                            <constraint firstItem="7pu-KG-5Nz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cfI-Tr-UOp"/>
+                            <constraint firstAttribute="bottom" secondItem="7pu-KG-5Nz" secondAttribute="bottom" constant="-25" id="dBU-se-yez"/>
+                            <constraint firstItem="7pu-KG-5Nz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="vXd-Zp-Hph"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -30,6 +35,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="day_morning" width="236" height="511"/>
+        <image name="day_morning" width="564" height="1017"/>
     </resources>
 </document>
